@@ -1,0 +1,30 @@
+ <div class="form sign-in">
+                    <form action="/accounts/login/" method="post">
+                        {%csrf_token%}
+                    <div class="input-group">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="Enter Username" name="username" required />
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" placeholder="Enter Password" name="password" required />
+                    </div>
+                    <button type="submit">
+                        Login
+                    </button>
+
+                    <p>
+                        <span>
+                            Don't have an account?
+                        </span>
+                        <b onclick="toggle();" class="pointer">
+                            Sign up here
+                        </b>
+                    </p>
+                        <p>
+                              {% for message in messages %}
+            <h3> {{message}} </h3>
+            {% endfor %}
+                        </p>
+                    </form>
+                </div>

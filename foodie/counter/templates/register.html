@@ -1,0 +1,41 @@
+ <div class="form sign-up">
+                    <form action="/accounts/register/" method="post">
+                        {%csrf_token%}
+                    <div class="input-group">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="Name" id="firstname" name="firstname"/>
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="Username" id="username" name="username" required/>
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bx-mail-send'></i>
+                        <input type="email" placeholder="Email" id="email" name="email" required/>
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" placeholder="Enter Password" id="password" name="password" required/>
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" placeholder="Repeat Password" id="password1" name="password1" required />
+                    </div>
+                    <button type="submit" class="Submit">
+                        Sign up
+                    </button>
+                    <p>
+                        <span>
+                            Already have an account?
+                        </span>
+                        <b onclick="toggle()" class="pointer">
+                            login in here
+                        </b>
+                    </p>
+                        <p>
+                              {% for message in messages %}
+            <h3> {{message}} </h3>
+            {% endfor %}
+                        </p>
+                    </form>
+                </div>
