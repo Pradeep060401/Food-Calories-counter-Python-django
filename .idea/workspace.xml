@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f26ba42-3db3-4ce8-9193-9ef4b92f6b3b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/calories.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/accounts/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/accounts/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/accounts/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/accounts/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/accounts/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/accounts/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/accounts/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/accounts/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/templates/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/templates/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/templates/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/templates/ppp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/templates/preloader.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/counter/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/About-Us.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/calories001.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/ppppp.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/running.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/shocked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/walking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/weightlifter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/images/yoga.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/preloader.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/static/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/foodie/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,12 +20,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
