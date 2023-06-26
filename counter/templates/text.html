@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" rel="stylesheet"/>
+       <link  rel="stylesheet" href="{% static 'preloader.css'%}">
+    <title>Diet Plan Website</title>
+    <style>
+      /* styles.css */
+
+/* Reset default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.card {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+.card:hover{
+  background-color: rgb(62,62,62);
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
+
+}
+    </style>
+</head>
+<body>
+ {%include 'preloader.html'%}
+
+  <nav class="p-3 bg-dark text-white">
+    <div>
+        {% if user.is_authenticated %}
+           <p style="color:green;"><b> Hello, {{user.username}}</b></p>
+
+    </div>
+   <div class="container">
+     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+         <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+         <li><a href="\accounts/about" class="nav-link px-2 text-white">About-us</a></li>
+         <li><a href="\accounts/track" class="nav-link px-2 text-white">TRACK-CALORIES</a></li>
+         <li><a href="\accounts/bmi" class="nav-link px-2 text-white">BMI</a></li>
+         <li><a href="\accounts/execersice" class="nav-link px-2 text-white">Exercises</a></li>
+       </ul>
+
+
+       <div class="text-end">
+           <a class="text-end" href="\accounts/logout">
+           <button type="button" class="btn btn-outline-light me-2">Logout</button>
+               </a>
+           {%else%}
+            <a class="text-end" href="accounts/login">
+           <button type="button" class="btn btn-outline-light me-2">Login</button>
+           </a>
+
+       </div>{% endif %}
+     </div>
+   </div>
+ </nav>
+    <header>
+      <h1>Diet Plan Website</h1>
+    </header>
+
+    <section class="card-container">
+        <div class="card">
+            <img src="{% static 'images/veg.jpg'%}" alt="Card 1">
+            <div class="card-content">
+                <h2>VEG DIET</h2>
+                <p>For vegetarians who eat dairy products and eggs, a healthy diet is the same as for anyone else, but without meat or fish. </p>
+                <a href="/accounts/veg" class="btn">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/nonveg.png'%}" alt="Card 2">
+            <div class="card-content">
+                <h2>NON VEG DIET</h2>
+                <p>For Non-vegetarians who eat dairy products ,chiken and eggs, a healthy diet is the same as for anyone else, but with meat or fish.</p>
+                <a href="/accounts/non" class="btn">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/keto.jpg'%}" alt="Card 3">
+            <div class="card-content">
+                <h2>KETO DIET</h2>
+                <p>The ketogenic diet is a high-fat, adequate-protein, low-carbohydrate dietary therapy that in conventional medicine is used mainly to treat hard-to-control epilepsy in children. The diet forces the body to burn fats rather than carbohydrates.</p>
+                <a href="/accounts/keto" class="btn">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/images.jpg'%}" alt="Card 3">
+          <div class="card-content">
+              <h2>WEIGHT LOSS DIET</h2>
+              <p>For all those who want to reduce there weight and want to reduce fat they can follow this diet for a healthy life ahead.</p>
+              <a href="/accounts/weightl" class="btn">Read More</a>
+          </div>
+      </div>
+      <div class="card">
+            <img src="{% static 'images/gym diet.jpg'%}" alt="Card 3">
+            <div class="card-content">
+                <h2>WEIGHT GAIN DIET</h2>
+                <p>For all those who want to increase there weight and want to increase body mass they can follow this diet for a healthy life ahead. </p>
+                <a href="/accounts/weightgain" class="btn">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/carbs.jpg'%}" alt="Card 3">
+          <div class="card-content">
+              <h2>LOW CARBS DIET</h2>
+              <p>Low-carbohydrate diets restrict carbohydrate consumption relative to the average diet. Foods high in carbohydrates are limited, and replaced with foods containing a higher percentage of fat and protein, as well as low carbohydrate foods.</p>
+              <a href="/accounts/lowcarb" class="btn">Read More</a>
+          </div>
+      </div>
+    
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Diet Plan Website. All rights reserved.</p>
+    </footer>
+ <script>
+
+setTimeout(loading,800 );
+
+
+
+function loading() {
+    var loader = document.getElementById('preloader');
+    loader.style.display = "none";
+
+    window.addEventListener("load",  ()=>{
+
+    loader.style.display = "none"
+});
+}
+  </script>
+</body>
+</html>
+

@@ -1,11 +1,9 @@
-
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
 
 
 # Create your views here.
-
 
 
 def login(request):
@@ -58,13 +56,33 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
 
+
 def about(request):
-    return render (request,'about.html')
+    return render(request, 'about.html')
+
 
 def bmi(request):
     return render(request, 'bmi.html')
 
 
+def track(request):
+    return render(request, 'track.html')
+
+def diet(request):
+    return render(request, 'text.html')
 
 
-
+def execersice(request):
+    return render(request, 'execersice.html')
+def veg(request):
+    return render(request, 'vegdiet.html')
+def non(request):
+    return render(request, 'nonveg.html')
+def keto(request):
+    return render(request, 'keto.html')
+def lowcarb(request):
+    return render(request, 'lowcarbdiet.html')
+def weightl(request):
+    return render(request, 'weightloss.html')
+def weightgain(request):
+    return render(request, 'weightgain.html')
