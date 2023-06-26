@@ -8,22 +8,19 @@ from django.http import HttpResponse
 
 # wp80FpjEleF0CHYlW1BEIw==ogoqwPdAM0HQ350E
 # Create your views here.
-
 def getdata(query):
-
     api_url = f'https://api.api-ninjas.com/v1/nutrition?query={query}'
     api_request = requests.get(
-        api_url, headers={'X-Api-Key': 'wp80FpjEleF0CHYlW1BEIw==ogoqwPdAM0HQ350E'})
+    api_url, headers={'X-Api-Key': 'wp80FpjEleF0CHYlW1BEIw==ogoqwPdAM0HQ350E'})
     try:
-        print(api_request.content, "ss")
         api = json.loads(api_request.content)
+        # print(api_request.content)
         return api
 
-
     except Exception as e:
-        print(e)
         api = "oops!  "
-        if api=="oops! ":
+        print(e)
+        if api == "oops!  ":
             return redirect('/')
         return api
 
