@@ -14,7 +14,7 @@ def getdata(query):
     api_url, headers={'X-Api-Key': 'wp80FpjEleF0CHYlW1BEIw==ogoqwPdAM0HQ350E'})
     try:
         api = json.loads(api_request.content)
-        print(api_request.content, "ss")
+        # print(api_request.content)
         return api
 
     except Exception as e:
@@ -24,15 +24,20 @@ def getdata(query):
             return redirect('/')
         return api
 
+def getcalories(api):
+    cal = api[0]['calories']
+    return cal
+
 def home(request):
     
     if request.method == 'POST':
         query = request.POST['query']
         api = getdata(query)
-        
+        cal = getcalories(api)
+        print(cal)
         if api:
             n=len(api)
-            print(n)
+            # print(n)
             return render(request, 'home.html', {'api': api,'n': n})
 
         else:
