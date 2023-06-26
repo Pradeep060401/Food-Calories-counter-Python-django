@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" rel="stylesheet"/>
+       <link  rel="stylesheet" href="{% static 'preloader.css'%}">
+    <title>Veg Diet Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .highlight {
+            background-color: #f5f5f5;
+        }
+
+        .calories {
+            font-weight: bold;
+        }
+        .bottom{
+            text-align: center;
+            padding:10px;
+            background-color: aliceblue;
+        }
+      
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Diet Chart For a week</h1>
+        <table>
+            <tr>
+                <th>Meal</th>
+                <th>Food</th>
+                <th>Calories</th>
+            </tr>
+            <h1>SUNDAY</h1>
+            <tr>
+                <td>Breakfast</td>
+                <td> A bowl of oatmeal cooked in whole milk with sliced bananas and a tablespoon of honey.</td>
+                <td class="calories">300</td>
+            </tr>
+            <tr class="highlight">
+                <td>Lunch</td>
+                <td>A portion of rice with chicken curry and a side of mixed vegetables.</td>
+                <td class="calories">360</td>
+            </tr>
+            <tr>
+                <td>Snack</td>
+                <td>  A handful of mixed nuts and a glass of mango shake made with whole milk./Two boiled eggs and a fruit yogurt.</td>
+                <td class="calories">250</td>
+            </tr>
+            <tr class="highlight">
+                <td>Dinner</td>
+                <td> A portion of paneer tikka masala with naan bread and a vegetable salad.</td>
+                <td class="calories">500</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Meal</th>
+                <th>Food</th>
+                <th>Calories</th>
+            </tr>
+            <h1>MONDAY</h1>
+            <tr>
+                <td>Breakfast</td>
+                <td>Two whole wheat parathas with a serving of potato and onion curry.
+                </td>
+                <td class="calories">300</td>
+            </tr>
+            <tr class="highlight">
+                <td>Lunch</td>
+                <td>A portion of biryani with chicken or vegetables and a side of raita.</td>
+                <td class="calories">400</td>
+            </tr>
+            <tr>
+                <td>Snack</td>
+                <td> A protein smoothie made with whole milk, peanut butter, and a banana./A bowl of curd (yogurt) with a tablespoon of honey and chopped dry fruits.</td>
+            </tr>
+            <tr class="highlight">
+                <td>Dinner</td>
+                <td>A portion of dal makhani with rice or roti and a side of mixed vegetable curry.</td>
+                <td class="calories">540</td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <th>Meal</th>
+                <th>Food</th>
+                <th>Calories</th>
+            </tr>
+            <h1>TUESDAY</h1>
+            <tr>
+                <td>Breakfast</td>
+                <td>A bowl of semolina porridge cooked in whole milk with added dry fruits and jaggery.</td>
+                <td class="calories">260</td>
+            </tr>
+            <tr class="highlight">
+                <td>Lunch</td>
+                <td>A portion of rajma (kidney bean) curry with rice and a side of mixed vegetable salad.</td>
+                <td class="calories">350</td>
+            </tr>
+            <tr>
+                <td>Snack</td>
+                <td> A peanut butter sandwich made with whole wheat bread.</td>
+                <td class="calories">200</td>
+            </tr>
+            <tr class="highlight">
+                <td>Dinner</td>
+                <td>  A portion of chicken biryani with a side of raita and a vegetable curry.</td>
+                <td class="calories">450</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Meal</th>
+                <th>Food</th>
+                <th>Calories</th>
+            </tr>
+            <h1>WEDNESDAY</h1>
+            <tr>
+                <td>Breakfast</td>
+                <td> A bowl of poha (flattened rice) cooked with vegetables and peanuts.</td>
+                <td class="calories">200</td>
+            </tr>
+            <tr class="highlight">
+                <td>Lunch</td>
+                <td>A portion of spinach and paneer curry with rice or roti and a side of lentils.</td>
+                <td class="calories">278</td>
+            </tr>
+            <tr>
+                <td>Snack</td>
+                <td> A fruit smoothie made with whole milk, yogurt, and your choice of fruits.</td>
+                <td class="calories">200</td>
+            </tr>
+            <tr class="highlight">
+                <td>Dinner</td>
+                <td> A portion of fish curry with rice or roti and a side of mixed vegetables.</td>
+                <td class="calories">500</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Meal</th>
+                <th>Food</th>
+                <th>Calories</th>
+            </tr>
+            <h1>THURSDAY</h1>
+            <tr>
+                <td>Breakfast</td>
+                <td> Two whole wheat parathas with a serving of potato and onion curry.</td>
+                <td class="calories">200</td>
+            </tr>
+            <tr class="highlight">
+                <td>Lunch</td>
+                <td>A portion of biryani with chicken or vegetables and a side of raita.</td>
+                <td class="calories">422</td>
+            </tr>
+            <tr>
+                <td>Snack</td>
+                <td>  A protein smoothie made with whole milk, peanut butter, and a banana.</td>
+                <td class="calories">250</td>
+            </tr>
+            <tr class="highlight">
+                <td>Dinner</td>
+                <td>A portion of dal makhani with rice or roti and a side of mixed vegetable curry.</td>
+                <td class="calories">478</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Meal</th>
+                <th>Food</th>
+                <th>Calories</th>
+            </tr>
+            <h1>FRIDAY</h1>
+            <tr>
+                <td>Breakfast</td>
+                <td>A bowl of oatmeal cooked in whole milk with sliced bananas and a tablespoon of honey.</td>
+                <td class="calories">310</td>
+            </tr>
+            <tr class="highlight">
+                <td>Lunch</td>
+                <td>A portion of rice with chicken curry and a side of mixed vegetables.</td>
+                <td class="calories">420</td>
+            </tr>
+            <tr>
+                <td>Snack</td>
+                <td>A handful of mixed nuts and a glass of mango shake made with whole milk.
+                    Dinner: A bow/ A cup of low-fat yogurt.</td>
+                <td class="calories">200</td>
+            </tr>
+            <tr class="highlight">
+                <td>Dinner</td>
+                <td> A portion of paneer tikka masala with naan bread and a vegetable salad.</td>
+                <td class="calories">400</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Meal</th>
+                <th>Food</th>
+                <th>Calories</th>
+            </tr>
+            <h1>SATURDAY</h1>
+            <tr>
+                <td>Breakfast</td>
+                <td>A bowl of poha (flattened rice) cooked with vegetables and peanuts.</td>
+                <td class="calories">300</td>
+            </tr>
+            <tr class="highlight">
+                <td>Lunch</td>
+                <td> A portion of spinach and paneer curry with rice or roti and a side of lentils.</td>
+                <td class="calories">400</td>
+            </tr>
+            <tr>
+                <td>Snack</td>
+                <td> A fruit smoothie made with whole milk, yogurt, and your choice of fruits.</td>
+                <td class="calories">200</td>
+            </tr>
+            <tr class="highlight">
+                <td>Dinner</td>
+                <td>A portion of fish curry with rice or roti and a side of mixed vegetables.</td>
+                <td class="calories">350</td>
+            </tr>
+        </table>
+        <BR>
+            <BR>
+                FOR A BETTER OUTCOME FOLLOW THIS FOR A MINIMUM OF A MONTH. 
+            <br>
+            <br>
+            <br>
+            IF YOU GET BORED WITH THE SAME KIND OF FOOD ON A PARTICULAR DAY, YOU CAN SWITCH DIET PLANS AND EAT THE MONDAY DIET ON SUNDAY AND VISEVERSA.
+            
+    </div>
+    <br>
+    <hr>
+<!-- copied part  -->
+
+<section class="bottom">
+ <h2 class="topic-detail-heading-two" id="food-items-to-limit">Food Items To Limit</h2>
+                    <div class="lybMar-btm lybMar-top">
+                <p>Sugary foods and beverages
+                    <br>
+                High-Fat Dairy Products
+                <br>
+                Deep-Fried Foods
+                <br>
+                Sweets and Desserts
+                <br>
+                White Bread and Refined Grains</p></div>
+            <h2 class="topic-detail-heading-two" id="do-s-and-dont-s">Do's And Dont's</h2>
+                    <div class="lybMar-btm lybMar-top">
+                <p>Do's:
+                <br>  
+                Eat foods rich in, or fortified with calcium
+                <br>
+                Pair iron-rich foods with vitamin C
+                <br>
+                Be mindful of protein: About 20% of your total calories should come from protein</p>
+
+                <p>Don'ts:
+                    <br>
+                Do not eat processed sources of protein
+                <br>
+                Do not consume sugary desserts and sodas 
+                
+                Do not get stuck in a diet rut</p>
+                    </div>
+</section>
+</body>
+</html>
+
+
+
+
+           

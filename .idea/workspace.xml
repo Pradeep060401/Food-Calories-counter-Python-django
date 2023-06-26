@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f26ba42-3db3-4ce8-9193-9ef4b92f6b3b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/templates/bmi.html" beforeDir="false" afterPath="$PROJECT_DIR$/counter/templates/bmi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/counter/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/counter/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/templates/track.html" beforeDir="false" afterPath="$PROJECT_DIR$/counter/templates/track.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/counter/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie/static/images/login.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,5 +45,16 @@
       <updated>1671354678864</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -15,47 +15,13 @@
 
  div.realtive {
   position: relative;
-  top: 300px;
+  top: 90px;
   }
 
     </style>
 </head>
 <body>
 {%include 'preloader.html'%}
-
-
-
-
-
-
-<nav class="p-3 bg-dark text-white">
-    <div >
-        {% if user.is_authenticated %}
-           <p style="color:green;"><b> Hello, {{user.username}}</b></p>
-    </div>
-   <div class="p-3 mb-2 bg-white text-dark">
-     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start nav-p-3 bg-dark text-white">
-
-       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-         <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
-         <li><a href="\accounts/about" class="nav-link px-2 text-white">About-us</a></li>
-         <li><a href="\accounts/bmi" class="nav-link px-2 text-white">BMI</a></li>
-       </ul>
-
-
-       <div class="text-end">
-           <a class="text-end" href="\accounts/logout">
-           <button type="button" class="btn btn-outline-light me-2">Logout</button>
-               </a>
-           {%else%}
-            <a class="text-end" href="accounts/login">
-           <button type="button" class="btn btn-outline-light me-2">Login</button>
-           </a>
-
-       </div>{% endif %}
-     </div>
-   </div>
- </nav>
 
 <div class="realtive">
 
@@ -64,7 +30,7 @@
 
     <div class="nav-wrapper blue">
       <div class="containe1">
-        <a href="#" class="brand-logo center">Track calorie</a>
+        <a href="/" class="brand-logo center">Track calorie</a>
         <ul class="right">
           <li>
             <a href="#" class="clear-btn btn blue lighten-3">Clear All</a>
