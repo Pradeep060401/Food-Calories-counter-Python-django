@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" rel="stylesheet"/>
+       <link  rel="stylesheet" href="{% static 'preloader.css'%}">
+    <title>Document</title>
+    <style>
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 40px;
+      }
+
+      .card {
+        width: 300px;
+        margin-right: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        transition: transform 0.3s;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .card h3 {
+        margin-top: 10px;
+      }
+
+      .card p {
+        margin-top: 10px;
+      }
+
+      .card:hover {
+        background-color: rgb(186, 186, 186);
+        transform: scale(2.0);
+        z-index: 1;
+        position: relative;
+      }
+      footer {
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+  {%include 'preloader.html'%}
+
+  <nav class="p-3 bg-dark text-white">
+    <div>
+        {% if user.is_authenticated %}
+           <p style="color:green;"><b> Hello, {{user.username}}</b></p>
+
+    </div>
+   <div class="container">
+     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+         <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+         <li><a href="\accounts/about" class="nav-link px-2 text-white">About-us</a></li>
+         <li><a href="\accounts/track" class="nav-link px-2 text-white">TRACK-CALORIES</a></li>
+         <li><a href="\accounts/bmi" class="nav-link px-2 text-white">BMI</a></li>
+       </ul>
+
+
+       <div class="text-end">
+           <a class="text-end" href="\accounts/logout">
+           <button type="button" class="btn btn-outline-light me-2">Logout</button>
+               </a>
+           {%else%}
+            <a class="text-end" href="accounts/login">
+           <button type="button" class="btn btn-outline-light me-2">Login</button>
+           </a>
+
+       </div>{% endif %}
+     </div>
+   </div>
+ </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="card-container">
+      <div class="card-container">
+        <div class="card">
+          <img src=" {% static 'images/gg1.gif'%}" alt="Card 1" />
+          <h3>Sprinter sit-up</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Lie on back with the legs straight and arms by your side, elbows bent at a 90-degree angle</li>
+            <li>Sit up, bringing the left knee toward the right elbow</li>
+            <li>Lower back down to starting position</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg2.gif'%}" alt="Card 1" />
+          <h3>Dead bugs</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Lie on back with arms extended upwards and knees bent at 90degrees with feet in the air</li>
+            <li>Drop your arm and leg on the opposite side and make sure your leg doesn’t touch the floor</li>
+            <li>Bring them slowly back up to starting position and repeat with opposite side</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg3.gif'%}" alt="Card 1" />
+          <h3>Contralateral limb raises</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Lie on your stomach with the arms outstretched and palms facing one another</li>
+            <li>Slowly lift one arm a few inches off the floor, keeping it straight without rotating the shoulders</li>
+            <li>Simultaneously lift the leg of the other side</li>
+            <li>Hold the position, then lower the arm and leg back down</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg4.gif'%}" alt="Card 1" />
+          <h3>Three way crunches</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Lie on back, knees bent and feet hooked over each other</li>
+            <li>Perform a sequence of 3 crunches: firstly crunch to bring right elbow toward left knee, secondly crunch straight upwards, finally crunch to bring left elbow toward right knee</li>
+            <li>Repeat this sequence</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg5.gif'%}" alt="Card 1" />
+          <h3>Mountain climber twists</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Start on your hands and toes</li>
+            <li>Bending at the knee, bring your left knee forward directly under your chest while keeping your right leg straight</li>
+            <li>Quickly alternate legs while keeping your core muscles tight</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg6.gif'%}" alt="Card 1" />
+          <h3>Russian twist</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Sit on floor, knees bent and feet on the floor</li>
+            <li>Keep your back at a 45-degree angle, arms extended with palms together</li>
+            <li>Move the arms from one side to another in a twisting motion</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg7.gif'%}" alt="Card 1" />
+          <h3>Supine bridge with leg extension</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Lie on back, knees bent and feet on floor, arms elevated above your head</li>
+            <li>Lift hips up off the ground so that your knees, hips and shoulders are in a straight diagonal line</li>
+            <li>Holding hips level, lift one foot off the ground 1-2 inches and slowly place down again and repeat with alternate leg</li>
+            <li>Keep core muscles tight throughout the entire movement</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg8.gif'%}" alt="Card 1" />
+          <h3>Side to side lunge with punches</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Begin facing forward and pivot to the right</li>
+            <li>Step your right leg back as you bend your right knee into a lunge</li>
+            <li>Punch forward with your left arm then your right arm</li>
+            <li>Step back to the middle and turn to the left, taking your left leg back and your right arm forward in a punch followed by your left arm</li>
+            <li>Continue alternating sides, moving quickly</li>
+            <li>To make harder, lunge deeper or add a jump in the middle</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg9.gif'%}" alt="Card 1" />
+          <h3>Front kick plank</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Begin with feet together and the arms up in a defensive position</li>
+            <li>Bring the right knee up and kick outwards</li>
+            <li>Balancing on the left leg, bring the right leg back behind you, hands to the floor</li>
+            <li>Bring the left foot next to the right into a plank, holding briefly</li>
+            <li>Step the left foot forward into a lunge, stand up and again kick with the right leg</li>
+            <li>Continue with your front kick planks on the same leg</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg10.gif'%}" alt="Card 1" />
+          <h3>Fast step ups</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Complete quick step-ups, alternating legs with each step up</li>
+            <li>Choose a higher step to make this more difficult</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg11.gif'%}" alt="Card 1" />
+          <h3>Lateral hops</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Keeping your legs together, jump from side to side, jumping over an imaginary obstacle</li>
+            <li>Land with soft knees</li>
+            <li>Try to remain on the balls of your feet</li>
+          </p>
+        </div>
+      </div>
+      
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg12.gif'%}" alt="Card 1" />
+          <h3>Advanced jumping jacks</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Stand with your feet together, knees slightly bent, and arms at your sides.</li>
+            <li>Jump while raising your arms and separating legs to sides</li>
+            <li>Land on your forefoot with legs apart and arms overhead</li>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg13.gif'%}" alt="Card 1" />
+          <h3>Step up knee lifts</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Position left foot on a step</li>
+            <li>Step up with right leg and without touching the step with your right foot, bend your knee to bring up towards chest</li>
+            <li>Step straight back down again with your right foot and then your left foot</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg14.gif'%}" alt="Card 1" />
+          <h3>Lunge with bicep curl</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Hold a weight/water bottle in each hand</li>
+            <li>Step forward to complete a lunge, bending at your knees to lower downward</li>
+            <li>Do not let your knees pass over your toes</li>
+            <li>When in the downward lunge complete a bicep curl with both arms (bending at your elbows to lift weight toward shoulders)</li>
+            <li>Lower weights back down again and step back to the starting position</li>
+            <li>Repeat alternating legs</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg15.gif'%}" alt="Card 1" />
+          <h3>Side lunges</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Step out to the side, keeping toes pointing forward</li>
+            <li>Complete a lunge, bending at the knee to lower downwards</li>
+            <li>Your knees should not pass over your toes</li>
+            <li>Step back to starting position to repeat to the opposite side</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg16.gif'%}" alt="Card 1" />
+          <h3>Donkey kicks</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Position self on forearms and knees</li>
+            <li>Keeping core tight, kick 1 leg backwards into the air</li>
+            <li>Bend knee to bring leg back down and the knee toward your chest</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg17.gif'%}" alt="Card 1" />
+          <h3>Single leg deadlift</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Stand with feet together</li>
+            <li>Lift the right leg, and lower the arms and torso while raising the right leg behind the body</li>
+            <li>Keep the left knee slightly bent</li>
+            <li>Raise the torso while lowering the right leg</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg18.gif'%}" alt="Card 1" />
+          <h3>Lunge with twist</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Complete a lunge, bending at both knees to lower downwards</li>
+            <li>Your knees should not pass over your toes</li>
+            <li>Instead of bringing the forward leg back to the starting position, raise it up off the floor while lifting the arms overhead
+            </li>
+            <li>Keep the knee bent at 90 degrees</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg19.gif'%}" alt="Card 1" />
+          <h3>Backward lunge with front kick</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Start with feet together</li>
+            <li>Step back with one foot to complete a lunge</li>
+            <li>Step back toward starting position, swinging your leg through to complete a kick</li>
+            <li>Return to starting position and repeat</li>
+          </p>
+        </div>
+      </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg20.gif'%}" alt="Card 1" />
+          <h3>Squat reach and jump</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Keep your feet shoulder-width apart and perform a squat by bending at the knees to lower yourself downwards</li>
+            <li>Your knees should not pass over your toes</li>
+            <li>From the squat position, straighten and jump upwards, reaching both arms forward</li>
+
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg21.gif'%}" alt="Card 1" />
+          <h3>Chair single leg squats</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Stand on one leg, in front of chair</li>
+            <li>Slowly squat to sit down onto chair</li>
+            <li>You can use your other foot to guide you and balance (by tapping on the ground as needed)</li>
+            <li>Make sure that your knees stay aligned and do not drop or bow either side</li>
+            <li>Your knee should not pass over your toe</li>
+            <li>Stand back up again</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg22.gif'%}" alt="Card 1" />
+          <h3>Squat floor reach</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Stand feet hip-width apart and arms by sides </li>
+            <li>Bend left knee, lifting foot behind you</li>
+            <li>Squat down and raise right arm out to the side at shoulder height</li>
+            <li>Reach left hand down across body, touching the floor outside your right foot</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg23.gif'%}" alt="Card 1" />
+          <h3>Rows</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Hold a water bottle or weight in each hand</li>
+            <li>Tip forward at hips, keeping back straight and core muscles tight</li>
+            <li>Bend at elbows to squeeze shoulder blades backwards, tensing your mid back muscles as you do so</li>
+            <li>To progress this exercise, aim to complete standing on one leg</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg24.gif'%}" alt="Card 1" />
+          <h3>Three way arms</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Hold a water bottle or weight in each hand</li>
+            <li>Perform a front raise, keeping elbows straight to lift wrists to shoulder height in front of your body</li>
+            <li>Perform a lateral raise, keeping elbows straight to lift wrists to shoulder height to the side of your body</li>
+            <li>Perform a shoulder press, extending elbows to push weights above head</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg25.gif'%}" alt="Card 1" />
+          <h3>Push ups on bench/wall/floor</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+          <li>Position hands shoulder width apart on floor</li>
+          <li>Bending at elbows, lower yourself down</li>
+          <li>Keep back straight and core engaged</li>
+          <li>Push back away from the wall straightening elbows</li>
+
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg26.gif'%}" alt="Card 1" />
+          <h3>Plank push-ups</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+          <li>Start in a plank position</li>
+          <li>Place down one hand at a time to lift up into a push­up position</li>
+          <li>Keep back straight and core tight</li>
+          <li>Move one arm at a time back into the plank position</li>
+          <li>Repeat, alternating arms</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg27.gif'%}" alt="Card 1" />
+          <h3>Dips on floor/bench</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+        
+        <li>Position hands and feet shoulder­width apart on the floor/bench</li>
+        <li>Straighten arms, lifting your hips off the ground</li>
+        <li>Bend elbows until 90 degrees, lowering body toward floor</li>
+        <li>Push straight back up to the starting position</li>
+
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg28.gif'%}" alt="Card 1" />
+          <h3>Press and plank</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+            <li>Start in a modified side­plank, knees bent</li>
+            <li>Hold a filled water bottle in your right hand, right elbow bent 
+              and weight resting against your forearm</li>
+            <li>Lift your hips so your body is straight from knees to shoulders, 
+              pressing water bottle up to the ceiling</li>
+           
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg29.gif'%}" alt="Card 1" />
+          <h3>Superman</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+          <li>Start on your hands and knees, with your back straight and core 
+            muscles tight</li>
+            <li>Keeping your hips low, simultaneously raise your right arm and left 
+              leg straightening at your elbow and knee</li>
+              <li>Pause then lower to the starting position before alternating 
+                sides</li>
+          </p>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'images/gg30.gif'%}" alt="Card 1" />
+          <h3>Shoulder push-up</h3>
+          <h4>3 sets of 10 repetitions</h4>
+          <p>
+           <li>Stand with feet hip width</li>
+           <li>Tip forward at hips, bending at knees until you can place both 
+            hands on floor in front of feet</li>
+           <li>Walk your hands out and away from your feet until your body 
+            is in an upside­down 'V' position</li>
+            <li>Press your chest back towards your thighs</li>
+            <li>Extend your left leg straight up towards the ceiling</li>
+            <li>Bending both elbows, bring your head toward the ground 
+              (keeping chin into your chest)</li>
+              <li>Press away from the floor and straighten your arms</li>
+
+
+          </p>
+        </div>
+      </div>  
+    </section>
+  <script>
+
+setTimeout(loading,800 );
+
+
+
+function loading() {
+    var loader = document.getElementById('preloader');
+    loader.style.display = "none";
+
+    window.addEventListener("load",  ()=>{
+
+    loader.style.display = "none"
+});
+}
+  </script>
+    <footer>
+      <p>&copy; 2023 excersice Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
