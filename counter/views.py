@@ -23,6 +23,10 @@ def getdata(query):
         if api == "oops!  ":
             return redirect('/')
         return api
+    
+def getcalories(api):
+    cal = api[0]["calories"]
+    return cal
 
 def home(request):
 
@@ -30,10 +34,12 @@ def home(request):
         query = request.POST['query']
 
         api=getdata(query)
+        cal = getcalories(api)
+        print(cal)
 
         if api:
             n=len(api)
-            print(n)
+            # print(n)
             return render(request, 'home.html', {'api': api,'n': n})
 
         else:
