@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daily Calorie Tracker</title>
+  <style>
+   
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+        }
+    
+        .container {
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+          text-align: center;
+        }
+    
+        form {
+          margin-bottom: 20px;
+        }
+    
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+    
+        input[type="text"],
+        input[type="number"] {
+          width: 100%;
+          padding: 8px;
+          font-size: 16px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+        }
+    
+        .btn {
+          display: inline-block;
+          background-color: #4caf50;
+          color: #fff;
+          padding: 8px 16px;
+          text-align: center;
+          font-size: 16px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+    
+        .btn:hover {
+          background-color: #45a049;
+        }
+    
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+    
+        th,
+        td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+    
+        th {
+          background-color: #4caf50;
+          color: #fff;
+        }
+    
+        .total {
+          font-weight: bold;
+        }
+      
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Daily Calorie Tracker</h1>
+     
+    <form action="" method="post" id="calorieForm">
+        {% csrf_token %}
+      <label for="food">Food:</label>
+      <input type="text" id="food" name="food" required>
+
+      <label for="calories">Quantity</label>
+      <input type="number" name="count" id="calories" >
+        <br>
+      <input type="submit" value="Add" class="btn">
+    </form>
+
+    <table id="calorieTable">
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Calories</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+
+        <!-- Table rows will be dynamically added here -->
+        <tr>
+            <td>{{name}}</td>
+            <td>{{name}}</td>
+            <td>Quantity</td>
+        </tr>
+      </tbody>
+      <tfoot>
+
+        <tr>
+          <td class="total">Total:</td>
+          <td id="totalCalories">{{cal}}</td>
+          <td>Quantity</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+</body>
+</html>

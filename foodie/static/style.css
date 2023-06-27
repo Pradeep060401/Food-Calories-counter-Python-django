@@ -23,13 +23,15 @@ h1 strong {
  background-color: #5fd068;
   width: 9em;
   font-size: 30px !important;
-  color: #+ffffff;
+  color: #ffffff;
 }
 
 .caloriescont {
   background-color: #ffffff;
   padding: 30px;
-}+
+}
+
+
 
 .caloriescont ul {
   padding: 0px;

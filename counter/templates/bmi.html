@@ -16,6 +16,13 @@
 <!--  color: #333;-->
 <!--}-->
 
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -186,37 +193,11 @@ h3 b {
 </head>
 <body>
 {%include 'preloader.html'%}
- <nav class="p-3 bg-dark text-white">
-    <div>
-        {% if user.is_authenticated %}
-           <p style="color:green;"><b> Hello, {{user.username}}</b></p>
-
-    </div>
-   <div class="container">
-     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-
-       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-         <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
-         <li><a href="\accounts/about" class="nav-link px-2 text-white">About-us</a></li>
-         <li><a href="\accounts/track" class="nav-link px-2 text-white">TRACK-CALORIES</a></li>
-         <li><a href="\accounts/execersice" class="nav-link px-2 text-white">Exercises</a></li>
-         <li><a href="\accounts/diet" class="nav-link px-2 text-white">Diet</a></li>
-       </ul>
-
-
-       <div class="text-end">
-           <a class="text-end" href="\accounts/logout">
-           <button type="button" class="btn btn-outline-light me-2">Logout</button>
-               </a>
-           {%else%}
-            <a class="text-end" href="accounts/login">
-           <button type="button" class="btn btn-outline-light me-2">Login</button>
-           </a>
-
-       </div>{% endif %}
-     </div>
-   </div>
- </nav>
+{% include 'header.html' %}
+<header>
+  <h1>BMI</h1>
+</header>
+ 
 
 <div>
  <h3><b>B</b>ody <b>M</b>ass <b>I</b>ndex Calculator</h3>

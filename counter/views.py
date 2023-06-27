@@ -35,7 +35,10 @@ def home(request):
 
         api=getdata(query)
         cal = getcalories(api)
-        print(cal)
+        # print(cal)
+        # api = getdata(name)
+        # cal = getcalories(api)
+       
 
         if api:
             n=len(api)
