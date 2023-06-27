@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food List</title>
+</head>
+<body>
+    <h1>Food List</h1>
+    <ul>
+        {% for food in foods %}
+            <li>{{ food.name }} - {{ food.calories }} calories</li>
+        {% empty %}
+            <li>No food items available</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_food' %}">Add Food</a>
+</body>
+</html>

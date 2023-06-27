@@ -39,7 +39,6 @@ def home(request):
 
         if api:
             n=len(api)
-            # print(n)
             return render(request, 'home.html', {'api': api,'n': n})
 
         else:
