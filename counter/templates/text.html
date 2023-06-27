@@ -106,8 +106,9 @@ footer {
 </head>
 <body>
  {%include 'preloader.html'%}
+ {% include 'header.html' %}
 
-  <nav class="p-3 bg-dark text-white">
+  {% comment %} <nav class="p-3 bg-dark text-white">
     <div>
         {% if user.is_authenticated %}
            <p style="color:green;"><b> Hello, {{user.username}}</b></p>
@@ -137,7 +138,7 @@ footer {
        </div>{% endif %}
      </div>
    </div>
- </nav>
+ </nav> {% endcomment %}
     <header>
       <h1>Diet Plan Website</h1>
     </header>

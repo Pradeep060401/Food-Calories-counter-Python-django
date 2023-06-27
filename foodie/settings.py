@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'counter',
     'mathfilters',
-    'accounts'
+    'accounts',
+    'tracker'
 ]
 
 MIDDLEWARE = [

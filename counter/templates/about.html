@@ -122,8 +122,8 @@
 
 <body>
 {%include 'preloader.html'%}
-
- <nav class="p-3 bg-dark text-white">
+{% include 'header.html' %}
+ {% comment %} <nav class="p-3 bg-dark text-white">
     <div>
         {% if user.is_authenticated %}
            <p style="color:green;"><b> Hello, {{user.username}}</b></p>
@@ -150,7 +150,7 @@
        </div>{% endif %}
      </div>
    </div>
- </nav>
+ </nav> {% endcomment %}
 
     <div class="section">
 
